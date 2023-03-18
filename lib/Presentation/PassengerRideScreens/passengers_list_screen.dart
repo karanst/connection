@@ -164,9 +164,10 @@ class _PassengerListScreenState extends State<PassengerListScreen> {
                                   )
                                 ],
                               ),
+                              rideListData != null ?
                               Expanded(
                                 child: ListView.builder(
-                                  // physics: const NeverScrollableScrollPhysics(),
+                                  physics: const NeverScrollableScrollPhysics(),
                                     shrinkWrap: false,
                                     scrollDirection: Axis.vertical,
                                     itemCount: rideListData!.data!.length,
@@ -299,6 +300,12 @@ class _PassengerListScreenState extends State<PassengerListScreen> {
                                         ),
                                       );
                                     }),
+                              )
+                              : Center(
+                                child: Container(
+                                    width: 30,
+                                    height: 30,
+                                    child: CircularProgressIndicator()),
                               ),
                             ],
                           ),

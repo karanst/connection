@@ -44,7 +44,7 @@ class _TiffinServiceState extends State<TiffinService> {
                       right: 0,
                       child: Container(
                           height: MediaQuery.of(context).size.height / 3,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
                                       'assets/images/rideScreenimage3.png'),
@@ -60,7 +60,7 @@ class _TiffinServiceState extends State<TiffinService> {
                         elevation: 2,
                         child: Column(
                           children: [
-                            SizedBox(
+                           const SizedBox(
                               height: 10,
                             ),
                             Container(
@@ -88,266 +88,204 @@ class _TiffinServiceState extends State<TiffinService> {
                             const SizedBox(
                               height: 10,
                             ),
-                            SingleChildScrollView(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 8),
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Container(
-                                    height: 30,
-                                    width: 75,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(color: Colors.grey)),
-                                    child: const Center(child: Text('City')),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Container(
-                                    height: 30,
-                                    width: 75,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(color: Colors.grey)),
-                                    child: Center(child: Text('Veg')),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Container(
-                                    height: 30,
-                                    width: 75,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(color: Colors.grey)),
-                                    child: Center(child: Text('non-veg')),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Container(
-                                    height: 30,
-                                    width: 75,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(color: Colors.grey)),
-                                    child: Center(child: Text('Jain')),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Container(
-                                    height: 30,
-                                    width: 75,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(color: Colors.grey)),
-                                    child: Center(child: Text('Jain')),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Container(
-                                    height: 30,
-                                    width: 75,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(color: Colors.grey)),
-                                    child: Center(child: Text('Jain')),
-                                  ),
-                                ],
-                              ),
-                            ),
+                            // SingleChildScrollView(
+                            //   padding:
+                            //       const EdgeInsets.symmetric(horizontal: 8),
+                            //   scrollDirection: Axis.horizontal,
+                            //   child: Row(
+                            //     mainAxisAlignment:
+                            //         MainAxisAlignment.spaceEvenly,
+                            //     children: [
+                            //       Container(
+                            //         height: 30,
+                            //         width: 75,
+                            //         decoration: BoxDecoration(
+                            //             color: Colors.white,
+                            //             borderRadius: BorderRadius.circular(10),
+                            //             border: Border.all(color: Colors.grey)),
+                            //         child: const Center(child: Text('City')),
+                            //       ),
+                            //       const SizedBox(
+                            //         width: 10,
+                            //       ),
+                            //       Container(
+                            //         height: 30,
+                            //         width: 75,
+                            //         decoration: BoxDecoration(
+                            //             color: Colors.white,
+                            //             borderRadius: BorderRadius.circular(10),
+                            //             border: Border.all(color: Colors.grey)),
+                            //         child: Center(child: Text('Veg')),
+                            //       ),
+                            //       const SizedBox(
+                            //         width: 10,
+                            //       ),
+                            //       Container(
+                            //         height: 30,
+                            //         width: 75,
+                            //         decoration: BoxDecoration(
+                            //             color: Colors.white,
+                            //             borderRadius: BorderRadius.circular(10),
+                            //             border: Border.all(color: Colors.grey)),
+                            //         child: Center(child: Text('non-veg')),
+                            //       ),
+                            //       const SizedBox(
+                            //         width: 10,
+                            //       ),
+                            //       Container(
+                            //         height: 30,
+                            //         width: 75,
+                            //         decoration: BoxDecoration(
+                            //             color: Colors.white,
+                            //             borderRadius: BorderRadius.circular(10),
+                            //             border: Border.all(color: Colors.grey)),
+                            //         child: Center(child: Text('Jain')),
+                            //       ),
+                            //       const SizedBox(
+                            //         width: 10,
+                            //       ),
+                            //       Container(
+                            //         height: 30,
+                            //         width: 75,
+                            //         decoration: BoxDecoration(
+                            //             color: Colors.white,
+                            //             borderRadius: BorderRadius.circular(10),
+                            //             border: Border.all(color: Colors.grey)),
+                            //         child: Center(child: Text('Jain')),
+                            //       ),
+                            //       const SizedBox(
+                            //         width: 10,
+                            //       ),
+                            //       Container(
+                            //         height: 30,
+                            //         width: 75,
+                            //         decoration: BoxDecoration(
+                            //             color: Colors.white,
+                            //             borderRadius: BorderRadius.circular(10),
+                            //             border: Border.all(color: Colors.grey)),
+                            //         child: Center(child: Text('Jain')),
+                            //       ),
+                            //     ],
+                            //   ),
+                            // ),
                             const SizedBox(
                               height: 10,
                             ),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height / 1.5,
-                              width: MediaQuery.of(context).size.width,
-                              child: ListView.builder(
-                                  // physics: const NeverScrollableScrollPhysics(),
-                                  shrinkWrap: false,
-                                  scrollDirection: Axis.vertical,
-                                  itemCount:
-                                      tiffinServiceResponse?.data?.length,
-                                  itemBuilder: (context, index) {
-                                    var item =
-                                        tiffinServiceResponse?.data?[index];
-                                    return Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(0),
-                                          child: Card(
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(10)),
-                                            child: Row(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: [
-                                                Container(
-                                                  height: 100,
-                                                  width: 100,
-                                                  decoration: BoxDecoration(
-                                                    image: DecorationImage(
-                                                        fit: BoxFit.fill,
-                                                        image: NetworkImage(
-                                                          item?.profileImage ??
-                                                              '',
-                                                        )),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            15),
+                            tiffinServiceResponse != null ?
+                            ListView.builder(
+                                physics: const NeverScrollableScrollPhysics(),
+                                shrinkWrap: true,
+                                scrollDirection: Axis.vertical,
+                                itemCount:
+                                    tiffinServiceResponse!.data!.length,
+                                itemBuilder: (context, index) {
+                                  var item =
+                                      tiffinServiceResponse!.data![index];
+                                  return Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(0),
+                                        child: Card(
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
+                                          child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                height: 110,
+                                                width: 110,
+                                                decoration: BoxDecoration(
+                                                  image: DecorationImage(
+                                                      fit: BoxFit.fill,
+                                                      image: NetworkImage(
+                                                        item.profileImage ??
+                                                            '',
+                                                      )),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          15),
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                width: 10,
+                                              ),
+                                              Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                       Text(
+                                                        item.uname.toString(),
+                                                          // 'Name Of Tiffin Centre',
+                                                          style: const TextStyle(
+                                                              fontSize: 15,
+                                                          fontWeight: FontWeight.w600)),
+                                                      const SizedBox(
+                                                        width: 65,
+                                                      ),
+                                                      // Image.asset(
+                                                      //   'assets/images/mark.png',
+                                                      //   height: 15,
+                                                      //   width: 15,
+                                                      // )
+                                                    ],
                                                   ),
-                                                ),
-                                                const SizedBox(
-                                                  width: 10,
-                                                ),
-                                                Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Row(
-                                                      children: [
-                                                        const Text(
-                                                            'Name Of Tiffin Centre',
-                                                            style: TextStyle(
-                                                                fontSize: 14)),
-                                                        const SizedBox(
-                                                          width: 65,
-                                                        ),
-                                                        Image.asset(
-                                                          'assets/images/mark.png',
-                                                          height: 15,
-                                                          width: 15,
-                                                        )
-                                                      ],
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 10,
-                                                    ),
-                                                    Row(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: const [
-                                                        Text('Aalu gobhi',
-                                                            style: TextStyle(
-                                                                fontSize: 12,
-                                                                color: Colors
-                                                                    .black38)),
-                                                        SizedBox(
-                                                          width: 40,
-                                                        ),
-                                                        Text('Palak paneer',
-                                                            style: TextStyle(
-                                                                fontSize: 12,
-                                                                color: Colors
-                                                                    .black38)),
-                                                      ],
-                                                    ),
-                                                    SizedBox(
-                                                      height: 5,
-                                                    ),
-                                                    Row(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: const [
-                                                        Text('Chana masala',
-                                                            style: TextStyle(
-                                                                fontSize: 12,
-                                                                color: Colors
-                                                                    .black38)),
-                                                        SizedBox(
-                                                          width: 18,
-                                                        ),
-                                                        Text(
-                                                            'butter-brushed naan',
-                                                            style: TextStyle(
-                                                                fontSize: 12,
-                                                                color: Colors
-                                                                    .black38)),
-                                                      ],
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 5,
-                                                    ),
-                                                    Row(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: const [
-                                                        Text('Dal makhani',
-                                                            style: TextStyle(
-                                                                fontSize: 12,
-                                                                color: Colors
-                                                                    .black38)),
-                                                        SizedBox(
-                                                          width: 30,
-                                                        ),
-                                                        Text('Stuffed paratha',
-                                                            style: TextStyle(
-                                                                fontSize: 12,
-                                                                color: Colors
-                                                                    .black38)),
-                                                      ],
-                                                    ),
-                                                    SizedBox(
-                                                      height: 5,
-                                                    ),
-                                                    Row(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .start,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        const Text('Kaju Kati',
-                                                            style: TextStyle(
-                                                                fontSize: 12,
-                                                                color: Colors
-                                                                    .black38)),
-                                                        const SizedBox(
-                                                          width: 90,
-                                                        ),
-                                                        CustomAppBtn(
-                                                          onPress: () {
-                                                            showExitPopup(item!);
-                                                            // Navigator.push(context, MaterialPageRoute(builder: (context)=>FestivalEventsScreen()));
-                                                          },
-                                                          height: 30,
-                                                          width: 80,
-                                                          title: 'Know more',
-                                                          fSize: 12,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 10,
-                                                    )
-                                                  ],
-                                                )
-                                              ],
-                                            ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  Container(
+                                                    height: 100,
+                                                    width: 210,
+                                                    child: GridView.builder(
+                                                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                                        crossAxisSpacing: 20,
+                                                          mainAxisSpacing: 0,
+                                                          childAspectRatio: 3,
+                                                          crossAxisCount: 2),
+                                                      physics: NeverScrollableScrollPhysics(),
+                                                      itemCount: item!.description!.length,
+                                                        itemBuilder: (context, i){
+                                                      return  Text(item.description![i]);
+                                                    }, ),
+                                                  ),
+                                                  Row(
+                                                    mainAxisAlignment: MainAxisAlignment.end,
+                                                    children: [
+                                                      CustomAppBtn(
+                                                        onPress: () {
+                                                          detailsPopUp(item);
+                                                          // Navigator.push(context, MaterialPageRoute(builder: (context)=>FestivalEventsScreen()));
+                                                        },
+                                                        height: 30,
+                                                        width: 80,
+                                                        title: 'Know more',
+                                                        fSize: 12,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  )
+                                                ],
+                                              )
+                                            ],
                                           ),
                                         ),
-                                      ],
-                                    );
-                                  }),
+                                      ),
+                                    ],
+                                  );
+                                })
+                            : Center(
+                              child: Container(
+                                width: 30,
+                                height: 30,
+                                child: const CircularProgressIndicator(),
+                              ),
                             ),
                           ],
                         ),
@@ -361,7 +299,7 @@ class _TiffinServiceState extends State<TiffinService> {
     );
   }
 
-  Future<bool> showExitPopup(Datum item) async {
+  Future<bool> detailsPopUp(Data item) async {
     return await showDialog(
           //show confirm dialogue
           //the return value will be from "Yes" or "No" options
@@ -422,22 +360,22 @@ class _TiffinServiceState extends State<TiffinService> {
                               children: [
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const [
-                                    Icon(
+                                  children:  [
+                                   const Icon(
                                       Icons.location_on_outlined,
                                       color: Colors.red,
                                     ),
                                     Text(
-                                      'Indore,Madhya Pradesh',
-                                      style: TextStyle(
+                                      item.address.toString(),
+                                      style: const TextStyle(
                                           fontSize: 12,
                                           color: CustomColors.primaryColor),
                                     ),
                                   ],
                                 ),
-                                const Text(
-                                  'Name Of Tiffin Center',
-                                  style: TextStyle(
+                                 Text(
+                                   item.uname.toString(),
+                                  style: const TextStyle(
                                       fontSize: 20,
                                       color: CustomColors.primaryColor),
                                 ),
@@ -447,98 +385,25 @@ class _TiffinServiceState extends State<TiffinService> {
                                 Container(
                                   margin: const EdgeInsets.symmetric(
                                       horizontal: 20),
-                                  padding: EdgeInsets.all(30),
+                                  padding: const EdgeInsets.only(top: 20, bottom: 10, left: 10, right: 10),
                                   height: 140,
                                   decoration: BoxDecoration(
                                     border: Border.all(
                                         color: CustomColors.primaryColor),
                                   ),
-                                  child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text('Aalu gobhi',
-                                                style: TextStyle(
-                                                    fontSize: 8,
-                                                    color: CustomColors
-                                                        .primaryColor)),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Text('Chana Masala',
-                                                style: TextStyle(
-                                                    fontSize: 8,
-                                                    color: CustomColors
-                                                        .primaryColor)),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Text('Palak Paneer',
-                                                style: TextStyle(
-                                                    fontSize: 8,
-                                                    color: CustomColors
-                                                        .primaryColor)),
-                                          ],
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text('Dal Makhani',
-                                                style: TextStyle(
-                                                    fontSize: 8,
-                                                    color: CustomColors
-                                                        .primaryColor)),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Text('butter-brushed naan',
-                                                style: TextStyle(
-                                                    fontSize: 8,
-                                                    color: CustomColors
-                                                        .primaryColor)),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Text('Dhokla',
-                                                style: TextStyle(
-                                                    fontSize: 8,
-                                                    color: CustomColors
-                                                        .primaryColor)),
-                                          ],
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text('Kaju Katli',
-                                                style: TextStyle(
-                                                    fontSize: 8,
-                                                    color: CustomColors
-                                                        .primaryColor)),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Text('Stuffed Paratha',
-                                                style: TextStyle(
-                                                    fontSize: 8,
-                                                    color: CustomColors
-                                                        .primaryColor)),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Text('Idali',
-                                                style: TextStyle(
-                                                    fontSize: 8,
-                                                    color: CustomColors
-                                                        .primaryColor)),
-                                          ],
-                                        ),
-                                      ]),
+                                  child: GridView.builder(
+                                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                        crossAxisSpacing: 20,
+                                        mainAxisSpacing: 0,
+                                        childAspectRatio: 2,
+                                        crossAxisCount: 3),
+                                    physics: const NeverScrollableScrollPhysics(),
+                                    itemCount: item.description!.length,
+                                    itemBuilder: (context, i){
+                                      return  Text(item.description![i], style: const TextStyle(
+                                        color: Colors.white
+                                      ),);
+                                    }, ),
                                 ),
                                 SizedBox(
                                   height: 20,
@@ -567,7 +432,7 @@ class _TiffinServiceState extends State<TiffinService> {
                                                         color: CustomColors
                                                             .primaryColor)),
                                                 Text(
-                                                  '\$10',
+                                                  '\$ ${item.perDayCharge.toString()}',
                                                   style: TextStyle(
                                                       color: CustomColors
                                                           .redColor),
@@ -585,7 +450,7 @@ class _TiffinServiceState extends State<TiffinService> {
                                                         color: CustomColors
                                                             .primaryColor)),
                                                 Text(
-                                                  '\$30',
+                                                  '\$ ${item.perDayCharge.toString()}',
                                                   style: TextStyle(
                                                       color: CustomColors
                                                           .redColor),
@@ -603,7 +468,7 @@ class _TiffinServiceState extends State<TiffinService> {
                                                         color: CustomColors
                                                             .primaryColor)),
                                                 Text(
-                                                  '\$50',
+                                                  '\$ ${item.perDayCharge.toString()}',
                                                   style: TextStyle(
                                                       color: CustomColors
                                                           .redColor),

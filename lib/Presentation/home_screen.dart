@@ -566,7 +566,7 @@ class _HomeScreenState extends State<HomeScreen> {
         drawer: GetDrawer(),
         appBar: AppBar(
             flexibleSpace: Container(
-              decoration:  BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,

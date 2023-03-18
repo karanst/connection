@@ -164,6 +164,7 @@ class _RidesScreenState extends State<RidesScreen> {
                                   )
                                 ],
                               ),
+                              rideListData != null ?
                               Expanded(
                                 child: ListView.builder(
                                   physics: const NeverScrollableScrollPhysics(),
@@ -253,6 +254,12 @@ class _RidesScreenState extends State<RidesScreen> {
                                         ),
                                       );
                                     }),
+                              )
+                              : Center(
+                                child: Container(
+                                  width: 30,
+                                    height: 30,
+                                    child: CircularProgressIndicator()),
                               ),
                             ],
                           ),

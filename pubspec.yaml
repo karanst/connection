@@ -44,6 +44,7 @@ dependencies:
   timelines: ^0.1.0
   story: ^1.0.0+1
   file_picker: ^5.2.6
+  qr_code_scanner: ^1.0.1
     #  image_picker: ^0.8.6
   calendar_date_picker2: ^0.4.5
 #  place_picker: ^0.10.0

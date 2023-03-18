@@ -466,7 +466,312 @@ class _AccommodationScreenState extends State<AccommodationScreen> {
     super.initState();
     accodomationList();
   }
+  Future<bool> detailsPopUp(Data item) async {
+    return await showDialog(
+      //show confirm dialogue
+      //the return value will be from "Yes" or "No" options
+      context: context,
+      builder: (context) => Dialog(
+          insetPadding: EdgeInsets.symmetric(vertical: 100),
+          backgroundColor: Colors.transparent,
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: Stack(
+              children: [
+                Positioned(
+                    top: 70,
+                    left: 0,
+                    right: 0,
+                    child: Container(
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: CustomColors2.dialogColor,),
+                      height: MediaQuery.of(context).size.height / 1.25,
+                      width: double.maxFinite,
 
+                    )),
+                Positioned(
+                    top: 5,
+                    left: 0,
+                    right: 0,
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 110,
+                            ),
+                            CircleAvatar(
+                                maxRadius: 70,
+                                backgroundImage: NetworkImage(item.profileImage ?? '')),
+                            SizedBox(
+                              width: 70,
+                            ),
+                            Column(
+                              children: [
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                InkWell(
+                                  onTap: (){
+                                    Navigator.pop(context);
+                                  },
+                                  child: Icon(Icons.close,
+                                      color: Colors.white, size: 30),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children:  [
+                                const Icon(
+                                  Icons.location_on_outlined,
+                                  color: Colors.red,
+                                ),
+                                Text(
+                                  item.address.toString(),
+                                  style: const TextStyle(
+                                      fontSize: 12,
+                                      color: CustomColors.primaryColor),
+                                ),
+                              ],
+                            ),
+                            Text(
+                              item.address.toString(),
+                              style: const TextStyle(
+                                  fontSize: 20,
+                                  color: CustomColors.primaryColor),
+                            ),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  horizontal: 20),
+                              padding: const EdgeInsets.only(top: 20, bottom: 10, left: 10, right: 10),
+                              height: 140,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: CustomColors.primaryColor),
+                              ),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Row(
+                                        children: [
+                                         const Text("Move in Date : ", style: TextStyle(color: Colors.red, fontSize: 11),),
+                                          Text(item.date.toString(), style: const TextStyle(color: Colors.white, fontSize: 11))
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          const Text("Availability : ", style: TextStyle(color: Colors.red, fontSize: 11),),
+                                          Text(item.availableFor.toString(), style: const TextStyle(color: Colors.white, fontSize: 11))
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          const Text("No of person : ", style: TextStyle(color: Colors.red, fontSize: 11),),
+                                          Text(item.noOfPerson.toString(), style: const TextStyle(color: Colors.white, fontSize: 11))
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          const Text("Sharing : ", style: TextStyle(color: Colors.red, fontSize: 11),),
+                                          Text(item.sharing.toString(), style: const TextStyle(color: Colors.white, fontSize: 11))
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          const Text("Contact No. : ", style: TextStyle(color: Colors.red, fontSize: 11),),
+                                          Text(item.mobile.toString(), style: const TextStyle(color: Colors.white, fontSize: 11))
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          const Text("Preferred Food : ", style: TextStyle(color: Colors.red, fontSize: 11),),
+                                          Text(item.foodType.toString(), style: const TextStyle(color: Colors.white, fontSize: 11))
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )
+                              // GridView.builder(
+                              //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                              //       crossAxisSpacing: 20,
+                              //       mainAxisSpacing: 0,
+                              //       childAspectRatio: 2,
+                              //       crossAxisCount: 3),
+                              //   physics: const NeverScrollableScrollPhysics(),
+                              //   itemCount: item.description!.length,
+                              //   itemBuilder: (context, i){
+                              //     return  Text(item.description![i], style: const TextStyle(
+                              //         color: Colors.white
+                              //     ),);
+                              //   }, ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  horizontal: 20),
+                              padding: const EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: CustomColors.primaryColor),
+                              ),
+                              child: Column(
+                                  crossAxisAlignment:
+                                  CrossAxisAlignment.center,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Text('Room Price :',
+                                                style: TextStyle(
+                                                    fontSize: 8,
+                                                    color: CustomColors
+                                                        .primaryColor)),
+                                            Text(
+                                              '\$ ${item.mrpPrice.toString()}',
+                                              style: TextStyle(
+                                                  color: CustomColors
+                                                      .primaryColor),
+
+                                            ),
+                                            Text(
+                                              '/ person',
+                                              style: TextStyle(
+                                                  color: CustomColors
+                                                      .redColor),
+                                            )
+                                          ],
+                                        ),
+                                        // SizedBox(
+                                        //   width: 20,
+                                        // ),
+                                        // Row(
+                                        //   children: [
+                                        //     Text('Monthly :',
+                                        //         style: TextStyle(
+                                        //             fontSize: 8,
+                                        //             color: CustomColors
+                                        //                 .primaryColor)),
+                                        //     Text(
+                                        //       '\$ ${item.perDayCharge.toString()}',
+                                        //       style: TextStyle(
+                                        //           color: CustomColors
+                                        //               .redColor),
+                                        //     )
+                                        //   ],
+                                        // ),
+                                        // SizedBox(
+                                        //   width: 20,
+                                        // ),
+                                        // Row(
+                                        //   children: [
+                                        //     Text('Yearly :',
+                                        //         style: TextStyle(
+                                        //             fontSize: 8,
+                                        //             color: CustomColors
+                                        //                 .primaryColor)),
+                                        //     Text(
+                                        //       '\$ ${item.perDayCharge.toString()}',
+                                        //       style: TextStyle(
+                                        //           color: CustomColors
+                                        //               .redColor),
+                                        //     )
+                                        //   ],
+                                        // ),
+                                      ],
+                                    ),
+                                  ]),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Download PDF'),
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.red,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                      BorderRadius.circular(40)),
+                                  fixedSize: Size(230, 40)),
+                            )
+                          ],
+                        ),
+                      ],
+                    )),
+                Positioned(
+                  top: 210,
+                  left: 130,
+                  right: 130,
+                  child: Container(
+                    height: 25,
+                    decoration: BoxDecoration(
+                      color: CustomColors2.dialogColor,
+                      border: Border.all(color: CustomColors2.lightyellow),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Dishes available',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: CustomColors2.lightyellow,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 373,
+                  left: 150,
+                  right: 150,
+                  child: Container(
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: CustomColors2.dialogColor,
+                      border: Border.all(color: CustomColors2.lightyellow),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Price',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: CustomColors2.lightyellow,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          )),
+    ) ??
+        false; //if showDialouge had returned null, then return false
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -575,6 +880,7 @@ class _AccommodationScreenState extends State<AccommodationScreen> {
                                   )
                                 ],
                               ),
+                              accomodationdetailsModel != null?
                               Expanded(
                                 child: ListView.builder(
                                   physics: const NeverScrollableScrollPhysics(),
@@ -725,7 +1031,9 @@ class _AccommodationScreenState extends State<AccommodationScreen> {
                                                               FontStyle
                                                                   .normal),
                                                         ),
-                                                        onPressed: () {},
+                                                        onPressed: () {
+                                                          detailsPopUp(accomodationdetailsModel!.data![index]);
+                                                        },
                                                       ),
                                                     ),
                                                   ],
@@ -737,7 +1045,11 @@ class _AccommodationScreenState extends State<AccommodationScreen> {
                                         ),
                                       );
                                     }),
-                              ),
+                              )
+                              : Center(child: Container(
+                                height: 30,
+                                  width: 30,
+                                  child: CircularProgressIndicator())),
                             ],
                           ),
 
